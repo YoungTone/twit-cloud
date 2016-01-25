@@ -1,0 +1,34 @@
+<% include ../partials/header %>
+<nav class="navbar navbar-default navbar-fixed-top navbar transparent">
+      <a class="navbar-brand" href="/">StreamTweet</a>
+
+<form class="navbar-form navbar-right" role="search" action="/search_user" >
+  <div class="form-group">
+      <input type="search" class="form-control" placeholder="Search" name="q">
+    </div>
+    <button type="submit" class="btn btn-default">Search</button>
+  </form>
+</nav>
+<center><h1>Tweets by User</h1></center>
+<center><button type="button" class="btn btn-primary" id="create_cloud">Generate Cloud</button></center>
+
+<% tweets.forEach(function(tweet) { %>
+<p><%= tweet.text  %></p>
+<p><%= tweet.created_at  %></p>
+
+<% }) %>
+
+<% tweets.forEach(function(tweet) { %>
+<p><%= tweet.text  %></p>
+<p><%= tweet.created_at  %></p>
+
+<% }) %>
+
+
+
+<% include ../partials/footer %>
+
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="/js/d3.layout.cloud.js"></script>
+<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+<script src="/js/cloud.js"></script>

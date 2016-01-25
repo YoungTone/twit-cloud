@@ -1,0 +1,37 @@
+<% include ../partials/header %>
+
+  <nav class="navbar navbar-default navbar-fixed-top navbar transparent">
+    <a class="navbar-brand" href="/search">StreamTweet</a>
+
+
+    <div class="navbar-form navbar-right form">
+      <div class="form-group">
+        <input class="form-control" id="search_term" placeholder="Search">
+      </div>
+      <button id="create_cloud" class="btn btn-default">Search</button>
+    </div>
+  </nav>
+  <center>
+    <h1>Twit-Cloud</h1>
+  </center>
+  <center>
+    <h4> Type in a username to display a cloud of the most commonly used words by specified user</h4>
+  </center>
+
+
+
+
+  <center>
+    <div class="cloud-wrapper"></div>
+  </center>
+
+
+
+
+
+  <% include ../partials/footer %>
+
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="/js/d3.layout.cloud.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script src="/js/cloud.js"></script>
